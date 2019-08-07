@@ -16,10 +16,50 @@ You're going to make a game just like the one in the [https://www.youtube.com/wa
 - Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
 - When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
 - When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
-
+-------------------------------------------------------
 HERE's the psudo code which I'll use as comments in the HTML document to structure my thought:
-* first, create a prompt for the user "Guess what letter I'm thinking of"
+* create divs for all the text that'll be on the screen:
+- Psychic game / "Guess what letter I'm thinking of" / Wins: / Losses: / Guesses Left: / Your Guesses So Far:
+- put <br> after all the text divs
+
 * Wins/Losses/Guesses Left/Your Guesse So Far are written on the web page
+ -- they all are divs and have id's 
+ 
+ -- call the id's in events with functions!
+ - declare variables for computer guess and user guess
+ - use onkeypress event type for USER guess function  
+ -- document.getElementById("demo").onkeypress = function() {myFunction()};
+ -- then for having the key pressed by user show up in screen, use 
+ function myFunction() {
+  document.getElementById("id name of Guesses so far") 0000.style.backgroundColor = "red";0000
+}
+
+ - declare a function for computer guess and user guess
+ -- use the functions created to plug into the "keypress" event
+ - declare a variable for computerChoice set to an array of all the English alphabets a-z
+ (would the user be able to play with pressing capital letters or keys other than small letters on the keyboard?)
+ - declare a variable COMPUTER guess to be set to computer choices which hold the function of the random number generator -- Math.floor(Math.random() * 28) -- 28 since the computer will pick b/n 1 and 27- # of letters in the alphabet. FYI Math.random() picks a decimal between 0.01 and 0.99 and Math.floor rounds down to the closest whole number
+
+
 * each of those text on the page have counters that go up by one each time there's an event
+-- use the id's of the text on the page to increment the counter by one 
 * limit the user guesses to 10
+-- use if/then stmts to alert user 
 * have an event when the user wins and when they lose 
+------- to print out user key press on screen, use: 
+- First declare a function to hold an event,  
+-- function guessesFunction(event)
+            (you'll place the function inside the guesses so far div outside of the <script> tag)
+- and inside the function that holds an event, declare a variable to hold the event of a key press
+- -- var x = event.key;
+- also, inside the function that holds an event, access the HTML document, get element by id for the divs that hold the Guesses so far and use the .innerHTML property to display it
+- 
+ document.getElementById("id name for Wins/Losses").innerHTML= x
+ 
+
+* When the player wins, increase the Wins counter and start the game over again (without refreshing the page).\
+- use if stmt (w/o else) to increase by 1 [wins++] everytime computerGuess === userGuess
+- initialize Wins to 0 to start with
+* When the player loses, increase the Losses counter and restart the game without a page refresh
+- use if stmt (w/o else) to increase by 1 [Loss++] everytime computerGuess !== userGuess
+- initialize Loss to 0 to start with
