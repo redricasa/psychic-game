@@ -59,7 +59,13 @@ HERE's the psudo code which I'll use as comments in the HTML document to structu
 
 * When the player wins, increase the Wins counter and start the game over again (without refreshing the page).\
 - use if stmt (w/o else) to increase by 1 [wins++] everytime computerGuess === userGuess
-- initialize Wins to 0 to start with
+- declare a variable and initialize Wins to 0 to start with
+- use a do/while loop to keep increasing the [Wins] counter by one while it's less than or equal to 10
+do {
+  wins++
+}
+while (userGuess === ComputerGuess);
 * When the player loses, increase the Losses counter and restart the game without a page refresh
 - use if stmt (w/o else) to increase by 1 [Loss++] everytime computerGuess !== userGuess
-- initialize Loss to 0 to start with
+- declare a variable and initialize Loss to 0 to start with 
+- use a do/while loop to keep increasing the [loss] counter by one while it's less than or equal to [<=] 10
