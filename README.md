@@ -69,3 +69,5 @@ while (userGuess === ComputerGuess);
 - use if stmt (w/o else) to increase by 1 [Loss++] everytime computerGuess !== userGuess
 - declare a variable and initialize Loss to 0 to start with 
 - use a do/while loop to keep increasing the [loss] counter by one while it's less than or equal to [<=] 10
+
+- do the same getelementbyid for both wins/loss divs
