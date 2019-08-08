@@ -70,4 +70,6 @@ while (userGuess === ComputerGuess);
 - declare a variable and initialize Loss to 0 to start with 
 - use a do/while loop to keep increasing the [loss] counter by one while it's less than or equal to [<=] 10
 
-- do the same getelementbyid for both wins/loss divs
+- do the same getelementbyid to display the increase on the screen for both wins/loss divs
+
+* use CSS to style the page(After the game is operational)
