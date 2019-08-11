@@ -1,3 +1,7 @@
+var winsElement = document.getElementById("wins-text");
+var lossElement = document.getElementById("losses-text");
+var guessesElement = document.getElementById("guesses-text");
+var soFarElement = document.getElementById("soFar-text");
 // - declare variables for computer guess and user guess
 // declare a variable for computerChoice set
 //  to an array of all the English alphabets a-z
@@ -33,29 +37,44 @@ var totalGuesses;
 function newGame(){
   compLetter= chooseLetter(compChoice);
   totalGuesses="";
+  guessesLeft=10;
+  soFarElement.innerHTML= totalGuesses;
   console.log('Comp Letter:', compLetter);// console loggs out compChoice 
+  updatePage();
 }
 newGame();//calls newgame function
 
 var win = 0;
 var loss = 0;
-function onkeypress(event){
+updatePage();
+function updatePage(){ //puts text to html
+  guessesElement.innerHTML=guessesLeft;
+  soFarElement.innerHTML= totalGuesses;
+  winsElement.innerHTML=win;
+  lossElement.innerHTML=loss;
+}
+function onKeyPress(event){
   var guessedKey = event.key;
-  totalGuesses+=(" "+ guessedKey)
+  totalGuesses+=(" "+ guessedKey);
+  
   if(guessesLeft>0){
     if (guessedKey === compLetter){
 
       win++;
+      
       newGame();//calls newgame function
     }
     else{
       guessesLeft--;
+      
     }
   }
   else{
     loss++;//increments loss counter by one
+    
     newGame();
   }
+  updatePage();
 }
 //every choice decrements the number of guesses
 document.addEventListener("keypress", onKeyPress);
