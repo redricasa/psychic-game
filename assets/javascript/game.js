@@ -20,28 +20,45 @@ function chooseLetter(array) {
 // return (array[Math.floor(Math.random() * array.length)]);
 // choose a random letter from array
 }
-var compLetter = chooseLetter(compChoice);
+var compLetter;
 //declared a variable to run the function
-console.log('Comp Letter:', compLetter);// console loggs out compChoice   
-
 // var userGuess --
 // // - use onkeypress event type for USER guess function  
 // document.addEventListener("keypress", function(event){
 //   console.log(event);
 // });
-var guesses = 10;
+var guessesLeft;
+var totalGuesses;
+//computer chooses a new letter- we get a new compLetter, and resets guesses left
+function newGame(){
+  compLetter= chooseLetter(compChoice);
+  totalGuesses="";
+  console.log('Comp Letter:', compLetter);// console loggs out compChoice 
+}
+newGame();//calls newgame function
+
 var win = 0;
 var loss = 0;
 function onkeypress(event){
   var guessedKey = event.key;
-  if (guessedKey === compLetter){
-    win++;
+  totalGuesses+=(" "+ guessedKey)
+  if(guessesLeft>0){
+    if (guessedKey === compLetter){
+
+      win++;
+      newGame();//calls newgame function
+    }
+    else{
+      guessesLeft--;
+    }
   }
   else{
-    loss++;
+    loss++;//increments loss counter by one
+    newGame();
   }
 }
-//to limit # of guesses to 25, use a for loop
+//every choice decrements the number of guesses
+document.addEventListener("keypress", onKeyPress);
 
 
 
