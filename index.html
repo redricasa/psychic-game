@@ -5,6 +5,7 @@
     <!-- Added link to the css reset and my own css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+       
 
 </head>
 
@@ -12,39 +13,17 @@
         <!-- * create divs for all the text that'll be on the screen:
         - Psychic game / "Guess what letter I'm thinking of" / Wins: / Losses: / Guesses Left: / Your Guesses So Far:
         - put <br> after all the text divs- no need to use <br> since h1's and div's are block elements -->
-    <h1 id=h1><strong>Psychic Letter Guessing Game</strong></h1>
-    <h3 id=h3>Guess What letter I'm thinking of</h3>
-    <div id=wins>Wins:</div>
-    <div id=losses>Losses:</div>
-    <div id=guessesLeft>Guesses Left:</div>
-    <div id=guessesSoFar>Your Guesses So Far:</div>
+    <h1 id='h1'><strong>Psychic Letter Guessing Game</strong></h1>
+    <h3 id='h3'>Guess What letter I'm thinking of</h3>
+    
+    <div id='wins'>Wins: <span id='wins-text'></span></div> <!--the span tag allows for text to be dynamically changed on the screen-->
+    <div id='losses'>Losses:<span id='wins-text'></span></div>
+    <div id='guessesLeft'>Guesses Left:<span id='wins-text'></span></div>
+    <div id='guessesSoFar'>Your Guesses So Far:<span id='wins-text'></span></div>
 
-    <script type="text/javascript">
-// - declare variables for computer guess and user guess
-  // declare a variable for computerChoice set
-    //  to an array of all the English alphabets a-z
-    var compChoice= ['a','b','c','d','e','f','g', 'h','i','j','k','l','m',
-    'n','o','p','q','r','s','t','u','v','w','x','y','z'];
-// declare a variable COMPUTER guess to be set to computer choices which hold the function of the random number generator
-//  -- Math.floor(Math.random() * 28) //-- 28 since the computer will pick b/n 1 and 27- # of letters in the alphabet.
-        var compGuess = compChoice(Math.floor(Math.random() * 28));
-        var userGuess
-// - use onkeypress event type for USER guess function  
-    document.getElementById("guessesSoFar").onkeypress = function() {myFunction()};
-
-    // declare a function for computer guess and user guess
-    function compGuessFunction(){};
-    function userGuessFunction(){};
   
-
-
-
-
-
-
-
-    </script>
-
+    <script src="assets/javascript/game.js"></script> <!--the script tag should be placed at the end of the body in
+    order to allow the HTML to lead before the JS is rendered-->
 
 </body>
 

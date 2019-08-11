@@ -43,8 +43,7 @@ HERE's the psudo code which I'll use as comments in the HTML document to structu
 
 * each of those text on the page have counters that go up by one each time there's an event
 -- use the id's of the text on the page to increment the counter by one 
-* limit the user guesses to 10
--- use if/then stmts to alert user 
+* use if/then stmts to limit the user guesses to 10 
 * have an event when the user wins and when they lose 
 ------- to print out user key press on screen, use: 
 - First declare a function to hold an event,  
