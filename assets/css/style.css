@@ -38,7 +38,7 @@
     margin-bottom: 10px;
     margin-right: 450px;
 }
-#guessesSoFar{
+#guessesSoFar{ /*the css for Your Guesses So Far*/
     text-align: center;
     font-family:"Lucida Console", Monaco, monospace;
     font-size: 20px;
@@ -46,4 +46,10 @@
     margin-bottom: 10px;
     margin-right: 450px;
 
+}
+#soFar-text{ /*the innerHTML color for Your Guesses So Far*/
+    color: goldenrod;
+}
+#wins-text{ /*the innerHTML color for Wins*/
+    color:red;
 }
