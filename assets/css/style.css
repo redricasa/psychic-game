@@ -51,5 +51,9 @@
     color: goldenrod;
 }
 #wins-text{ /*the innerHTML color for Wins*/
-    color:red;
+    color: greenyellow;
 }
+#losses-text{ /*the innerHTML color for Loss*/
+    color: red;
+}
+
