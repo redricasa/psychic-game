@@ -1,4 +1,4 @@
-# psychic-game.github.io
+
 # Frontend vanilla JavaScript application. Deployed link: https://redricasa.github.io/psychic-game/
 
 I've decided to code my own css insted of using bootstrap  and included a css reset from myerweb(public domain) to take care of how different browsers' default stying choices. 
