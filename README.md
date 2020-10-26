@@ -1,13 +1,11 @@
 # psychic-game.github.io
-week 3 UW Coding Bootcamp homework
-
-This is the basic non-challenging Javascript project for week 3 of UW codding bootcamp.
+# Frontend vanilla JavaScript application. Deployed link: https://redricasa.github.io/psychic-game/
 
 I've decided to code my own css insted of using bootstrap  and included a css reset from myerweb(public domain) to take care of how different browsers' default stying choices. 
 
 
 I'm building a game that has the computer guess a random letter in the English Alphabet and the user has to guess which letter the computer chose randomly. 
-Here's the instructions given:
+# Here's the instructions given:
 You're going to make a game just like the one in the [https://www.youtube.com/watch?v=qTc45Lox97g&feature=youtu.be]. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
 - Guess what letter I'm thinking of
 - Wins: (# of times the user has guessed the letter correctly)
@@ -17,14 +15,13 @@ You're going to make a game just like the one in the [https://www.youtube.com/wa
 - When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
 - When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
 -------------------------------------------------------
-HERE's the psudo code which I'll use as comments in the HTML document to structure my thought:
+# HERE's the psudo code which I'll use as comments in the HTML document to structure my thought:
 * create divs for all the text that'll be on the screen:
 - Psychic game / "Guess what letter I'm thinking of" / Wins: / Losses: / Guesses Left: / Your Guesses So Far:
 - put <br> after all the text divs
 
 * Wins/Losses/Guesses Left/Your Guesse So Far are written on the web page
  -- they all are divs and have id's 
- 
  -- call the id's in events with functions!
  - declare variables for computer guess and user guess
  - use onkeypress event type for USER guess function  
